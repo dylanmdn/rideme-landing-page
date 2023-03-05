@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>RideMe</title>
+    <script src="main.js" type="module"></script>
+    <script src="script.js" async type="text/javascript"></script>
+</head>
+<body>
+
+<!-- Navbar section -->
+<header class="w-full bg-black">
+    <nav class="relative mx-auto flex max-w-screen-xl items-center justify-between p-4 text-white">
+        <h1 class="text-xl font-medium md:text-2xl"><a href="#">RideMe</a></h1>
+
+        <div
+                class="flex items-center gap-2 md:flex md:items-center md:justify-end"
+        >
+            <div
+                    class="order-1 flex cursor-pointer items-center md:hidden"
+                    id="hamburger-icon"
+            >
+                <box-icon name="menu" color="#ffffff" size="md"></box-icon>
+            </div>
+
+            <ul class="text-md absolute left-0 -top-52 z-50 grid w-full gap-5 rounded-b-2xl bg-white p-5 text-black shadow-lg transition-transform duration-500 ease-in-out md:absolute md:left-[15%] md:top-auto md:flex md:w-auto md:translate-y-0 md:items-center md:gap-0 md:bg-transparent md:p-0 md:text-base md:text-white"
+                id="nav-links">
+                <li class="flex gap-2">
+                    <div class="flex md:hidden">
+                        <box-icon type="solid" name="buildings"></box-icon>
+                    </div>
+                    <a
+                            href="#"
+                            class="md:rounded-full md:py-2 md:px-3 md:transition-all md:duration-500 md:ease-in-out hover:md:bg-neutral-800"
+                    >Company</a
+                    >
+                </li>
+                <li class="flex gap-2">
+                    <div class="flex md:hidden">
+                        <box-icon type="solid" name="car"></box-icon>
+                    </div>
+                    <a
+                            href="#"
+                            class="md:rounded-full md:py-2 md:px-3 md:transition-all md:duration-500 md:ease-in-out hover:md:bg-neutral-800"
+                    >Your cars</a
+                    >
+                </li>
+                <li class="flex gap-2">
+                    <div class="flex md:hidden">
+                        <box-icon type="solid" name="help-circle"></box-icon>
+                    </div>
+                    <a
+                            href="#"
+                            class="md:rounded-full md:py-2 md:px-3 md:transition-all md:duration-500 md:ease-in-out hover:md:bg-neutral-800"
+                    >Help</a
+                    >
+                </li>
+                <li class="flex items-center gap-2">
+                    <div class="flex md:hidden">
+                        <box-icon type="solid" name="check-shield"></box-icon>
+                    </div>
+                    <a
+                            href="#"
+                            class="md:rounded-full md:py-2 md:px-3 md:transition-all md:duration-500 md:ease-in-out hover:md:bg-neutral-800"
+                    >Safety</a
+                    >
+                </li>
+            </ul>
+
+            <div
+                    class="flex items-center gap-2 md:flex md:items-center md:gap-14 md:gap-5"
+            >
+                <div
+                        class="flex cursor-pointer items-center gap-1 hover:rounded-full md:gap-3 md:py-2 md:px-3 md:transition-all md:duration-500 md:ease-in-out hover:md:bg-neutral-800"
+                >
+                    <box-icon name="user" color="#ffffff" size="sm"></box-icon>
+                    Sign in
+                </div>
+
+                <button class="bg-white p-2 text-base text-black md:px-5 md:py-2">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div class="mx-auto max-w-screen-lg py-7 px-4">
+    <!-- Form section -->
+    <div class="md:grid md:grid-cols-2 md:items-center md:gap-5">
+        <div class="">
+            <div>
+                <h1 class="text-2xl font-medium">
+                    It's time to change the ride experience
+                </h1>
+                <div class="py-2 text-base">
+                    Greater confort. Stronger performance. Improved safety. No
+                    Compromise
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div class="relative">
+                    <input
+                            type="text"
+                            name="location"
+                            placeholder="Enter pickup location"
+                            class="w-full bg-[#f4f4f4] py-3 pl-3 pr-10"
+                    />
+                    <div class="absolute right-3 top-3 opacity-50">
+                        <box-icon name="current-location"></box-icon>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <input
+                            type="text"
+                            name="location"
+                            placeholder="Enter destination"
+                            class="w-full bg-[#f4f4f4] py-3 pl-3 pr-10"
+                    />
+                    <div class="absolute right-3 top-3 opacity-50">
+                        <box-icon name="edit-location" type="solid"></box-icon>
+                    </div>
+                </div>
+
+                <button
+                        class="flex w-40 justify-between bg-black p-4 text-white hover:transition-all md:duration-300 md:ease-in-out hover:md:bg-neutral-800"
+                >
+                    Request now
+                    <box-icon name="right-arrow-alt" color="#ffff"></box-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="justify-self-center">
+            <img
+                    src="/assets/uber.png"
+                    class="mx-auto w-auto py-5 md:mx-0 md:w-full md:p-0"
+            />
+        </div>
+    </div>
+
+    <!-- Information section -->
+    <div class="py-16">
+        <h2 class="pb-5 text-center text-3xl">How it works</h2>
+        <div class="grid gap-5 text-center md:grid-cols-2 lg:flex">
+            <div class="">
+                <img src="/assets/find-car.png" class="mx-auto pb-3"/>
+                <h1 class="text-xl font-medium">Find the perfect car</h1>
+                <div class="mx-auto max-w-80 text-sm">
+                    Glide serenely to your destination as Clear motion transforms your
+                    car into a sanctuary of calm
+                </div>
+            </div>
+
+            <div>
+                <img src="/assets/trip-road.png" class="mx-auto pb-3"/>
+                <h1 class="text-xl font-medium">Book your trip car</h1>
+                <div class="mx-auto max-w-80 text-sm">
+                    Glide serenely to your destination as Clear motion transforms your
+                    car into a sanctuary of calm
+                </div>
+            </div>
+
+            <div>
+                <img src="/assets/hit-road.png" class="mx-auto pb-3"/>
+                <h1 class="text-xl font-medium">Hit on the road</h1>
+                <div class="mx-auto max-w-80 text-sm">
+                    Glide serenely to your destination as Clear motion transforms your
+                    car into a sanctuary of calm
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews destination Section -->
+    <div class="md:relative">
+        <h2 class="text-center text-3xl md:py-10">Our popular destination</h2>
+        <!-- Line bottom -->
+        <div class="md:absolute md:bottom-0 md:left-0 md:right-0 md:h-[1px] md:w-full md:bg-neutral-200"></div>
+        <!-- Reviews -->
+        <div class="md:relative md:flex md:items-center md:justify-center md:gap-10">
+            <!-- Santorini Reviews -->
+            <div class="py-10 md:p-0">
+                <h3 class="cursor-pointer pb-10 text-center text-2xl font-normal md:p-0" data-reviews="1"
+                    id="santorini">
+                    Santorini
+                    <div
+                            class="active md:relative md:h-[1px] md:w-full md:bg-black"
+                    ></div>
+                </h3>
+
+                <div
+                        class="grid gap-5 transition-all duration-500 ease-in-out md:absolute md:top-64 md:left-0 md:right-0 md:top-20 md:grid-cols-2 md:justify-items-center md:opacity-100"
+                        data-reviews="1"
+                        id="santorini-reviews"
+                >
+                    <div class="flex shadow-lg">
+                        <img src="/assets/cliente-1.png" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mr. Rahman Said</h4>
+                                <div>"Good care about client"</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-2.png" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mrs. Zetta Lowe</h4>
+                                <div>"Nice trip I recommend "</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Roma Reviews -->
+            <div class="py-10 md:p-0">
+                <h3 class="cursor-pointer pb-10 text-center text-2xl font-normal md:p-0" id="roma" data-reviews="2">
+                    Roma
+                    <div class=""></div>
+                </h3>
+                <div
+                        class="grid gap-5 transition-all duration-500 ease-in-out md:absolute md:top-64 md:left-0 md:right-0 md:top-20 md:grid-cols-2 md:justify-items-center md:opacity-0"
+                        data-reviews="2"
+                        id="roma-reviews"
+                >
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-3.jpeg" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mr. Ozella Kuhlman</h4>
+                                <div>"Good care about client"</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-5.png" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mrs. Zetta Lowe</h4>
+                                <div>"Nice trip I recommend "</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kuala Lampur Reviews -->
+            <div class="py-10 md:p-0">
+                <h3
+                        class="cursor-pointer pb-10 text-center text-2xl font-normal md:p-0"
+                        data-reviews="3"
+                        id="kuala-lampur"
+                >
+                    Kuala Lampur
+                    <div class=""></div>
+                </h3>
+                <div
+                        class="grid gap-5 transition-all duration-500 ease-in-out md:absolute md:top-64 md:left-0 md:right-0 md:top-20 md:grid-cols-2 md:justify-items-center md:opacity-0"
+                        data-reviews="3"
+                        id="kuala-lampur-reviews"
+                >
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-6.png" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mr. Ozella Kuhlman</h4>
+                                <div>"Good care about client"</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-7.jpeg" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mrs. Zetta Lowe</h4>
+                                <div>"Nice trip I recommend "</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sydney Reviews -->
+            <div class="py-10 md:p-0">
+                <h3
+                        class="cursor-pointer pb-10 text-center text-2xl font-normal md:p-0"
+                        data-reviews="4"
+                        id="sydney"
+                >
+                    Sydney
+                    <div class=""></div>
+                </h3>
+
+                <div
+                        class="grid gap-5 transition-all duration-500 ease-in-out md:absolute md:top-64 md:left-0 md:right-0 md:top-20 md:grid-cols-2 md:justify-items-center md:opacity-0"
+                        data-reviews="4"
+                        id="sydney-reviews"
+                >
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-8.jpeg" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mr. Ozella Kuhlman</h4>
+                                <div>"Good care about client"</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex shadow-lg">
+                        <img src="/assets/client-9.jpeg" class="h-32 w-32"/>
+                        <div class="flex items-center p-5">
+                            <div>
+                                <h4 class="font-semibold">Mrs. Zetta Lowe</h4>
+                                <div>"Nice trip I recommend "</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description for Our Secure and Safer Rides  -->
+    <div class="py-10 md:pt-64">
+        <div class="py-16 md:flex md:items-center md:gap-16">
+            <div class="   ">
+                <h1 class="text-2xl font-medium">Our Secure and Safer Rides</h1>
+                <div class="py-2 text-base">
+                    I Do more than just get people from A to B: make the ride matter
+                    with ground transportation solutions experiences from our Business
+                    that build relationships and drive results
+                </div>
+                <div class="my-2 inline-block cursor-pointer font-medium">
+                    Learn more
+                </div>
+            </div>
+            <div>
+                <img src="/assets/driver.jpeg"/>
+            </div>
+        </div>
+
+        <!-- Description for Our Commitment to your safety  -->
+        <div class="grid py-16 md:flex md:items-center md:gap-16">
+            <div class="order-last md:order-none">
+                <img src="/assets/enjoy-driver.jpeg"/>
+            </div>
+            <div class="order-2">
+                <h1 class="text-2xl font-medium">Our Commitment to your safety</h1>
+                <div class="py-2 text-base">
+                    I also agree that Uber or its representatives may contact me by
+                    email, phone, or SMS (including by automated means) at the email
+                    address or number I provide, including for marketing
+                </div>
+                <div class="my-2 inline-block cursor-pointer font-medium">
+                    Learn more
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description for We are always to welcome -->
+    <div class="py-16">
+        <div class="md:flex md:items-center md:gap-10">
+            <div class="">
+                <h1 class="text-2xl font-medium">We are always to welcome</h1>
+                <div class="py-2 text-base">
+                    Greater comfort. Stronger performance. Improved safety. No
+                    Compromise
+                </div>
+                <div class="grid gap-3 py-2 md:flex md:gap-10">
+                    <div class="w-32"><img src="/assets/google-play.png"/></div>
+                    <div class="w-32"><img src="/assets/app-store.png" alt=""/></div>
+                </div>
+            </div>
+            <div>
+                <img src="/assets/bg-image.png"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-16">
+        <div class="md:flex md:justify-between">
+            <div class="grid gap-3 pb-10 md:gap-7 md:p-0">
+                <h1 class="text-xl font-medium md:text-2xl">RideMe</h1>
+                <div>New ride experience ever</div>
+                <div class="inline-flex gap-5">
+                    <div class="cursor-pointer">
+                        <box-icon name="instagram-alt" type="logo"></box-icon>
+                    </div>
+                    <div class="cursor-pointer">
+                        <box-icon name="linkedin" type="logo"></box-icon>
+                    </div>
+                    <div class="cursor-pointer">
+                        <box-icon name="twitter" type="logo"></box-icon>
+                    </div>
+                    <div class="cursor-pointer">
+                        <box-icon name="facebook" type="logo"></box-icon>
+                    </div>
+                </div>
+                <div>All rights reserved @ofspace.co</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-10 md:flex md:items-center">
+                <div>
+                    <div class="relative pb-5">
+                        <h1
+                                class="text-xl font-medium before:absolute before:top-10 before:h-[2px] before:w-9 before:bg-black md:text-2xl"
+                        >
+                            Products
+                        </h1>
+                    </div>
+
+                    <div class="grid gap-5">
+                        <div><a href="#">Share Room</a></div>
+                        <div><a href="#">Place</a></div>
+                        <div><a href="#">Order</a></div>
+                        <div><a href="#">Boards</a></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative pb-5">
+                        <h1
+                                class="text-xl font-medium before:absolute before:top-10 before:h-[2px] before:w-9 before:bg-black md:text-2xl"
+                        >
+                            Company
+                        </h1>
+                    </div>
+
+                    <div class="grid gap-5">
+                        <div><a href="#">About Us</a></div>
+                        <div><a href="#">Company</a></div>
+                        <div><a href="#">Press & Blog</a></div>
+                        <div><a href="#">Privacy Policy</a></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative pb-5">
+                        <h1
+                                class="text-xl font-medium before:absolute before:top-10 before:h-[2px] before:w-9 before:bg-black md:text-2xl"
+                        >
+                            Resources
+                        </h1>
+                    </div>
+
+                    <div class="grid gap-5">
+                        <div><a href="#">Support</a></div>
+                        <div><a href="#">Last Updates</a></div>
+                        <div><a href="#">Updates Newsletter</a></div>
+                        <div><a href="#">Deal Flow Management</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
